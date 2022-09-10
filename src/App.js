@@ -1,13 +1,22 @@
-import './index.css';
+import "./index.css";
+import data from "./data";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomeScreen from "./Components/HomeScreen";
 
 function App() {
   return (
-    <div>
-      <header>
-        <a href='/'>Tino shop</a>
-      </header>
-      <main>Home page</main>
-    </div>
+    <BrowserRouter>
+      <div>
+        <header>
+          <a href="/">Tino shop</a>
+        </header>
+        <main>
+          <Routes>
+            <Route path="/" element={<HomeScreen/>}/> 
+          </Routes>
+        </main>
+      </div>
+    </BrowserRouter>
   );
 }
 
