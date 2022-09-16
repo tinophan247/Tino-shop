@@ -1,5 +1,4 @@
 import "./index.css";
-import data from "./data";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomeScreen from "./Components/HomeScreen";
 
