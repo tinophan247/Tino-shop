@@ -1,37 +1,28 @@
 const data = {
-    product :[
+    products :[
         {
-            name : 'Gonz bomber red',
-            category: 'Shirts',
-            img : '/images/p1.jpg',
-            price : 350,
-            countInStock : 10,
-            brand: 'Gonz',
+            name : 'Bleu De Chanel Parfume',
+            img : './images/sp1.jpg',
             rating : 4.5,
-            numReviews : 10,
-            description : 'high quality shirt'
+            price: '102'
         },
         {
-            name : 'Hades black shirt',
-            category: 'Shirts',
-            img : '/images/p2.jpg',
-            price : 250,
-            countInStock : 10,
-            brand: 'Hades',
-            rating : 4.9,
-            numReviews : 10,
-            description : 'high quality shirt'
+            name : 'Dior Sauvage EDP',
+            img : './images/sp2.jpg',
+            rating : 5,
+            price: '80'
+        }, 
+        {
+            name : 'Acqua Di Gio ',
+            img : './images/sp3.jpg',
+            rating : 4,
+            price: '70'
         },
         {
-            name : 'Bad Habbit gray',
-            category: 'Shirts',
-            img : '/images/p3.jpg',
-            price : 300,
-            countInStock : 10,
-            brand: 'Bad Habbit',
-            rating : 4.9,
-            numReviews : 10,
-            description : 'high quality shirt'
+            name : 'JPG Ultra Male',
+            img : './images/sp4.jpg',
+            rating : 4.5,
+            price: '70'
         },
     ]
 }
