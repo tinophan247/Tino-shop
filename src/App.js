@@ -8,7 +8,7 @@ function App() {
     <BrowserRouter>
       <div>
         <header>
-          <a href="/">Tino shop</a>
+          <a href="/">Tino shop +++</a>
         </header>
         <main>
           <Routes>
