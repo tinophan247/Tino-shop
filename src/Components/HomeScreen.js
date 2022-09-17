@@ -1,37 +1,36 @@
 import React, { useEffect, useReducer } from "react";
 import axios from "axios";
 import logger from "use-reducer-logger";
-import data from "../data";
 import Rating from "../Icons/Rating";
 
-// const reducer = (state, action) => {
-//   switch (action.type) {
-//     case "FETCH_REQUEST":
-//       return { ...state, loading: true };
-//     case "FETCH_SUCCESS":
-//       return { ...state, product: action.payload, loading: false };
-//     case "FETCH_FAIL":
-//       return { ...state, loading: false, error: action.payload };
-//     default:
-//       return state;
-//   }
-// };
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "FETCH_REQUEST":
+      return { ...state, loading: true };
+    case "FETCH_SUCCESS":
+      return { ...state, products: action.payload, loading: false };
+    case "FETCH_FAIL":
+      return { ...state, loading: false, error: action.payload };
+    default:
+      return state;
+  }
+};
 
 function HomeScreen() {
-  // const [{loading, error, product},dispatch] = useReducer(logger(reducer), {loading : true, error : '', product: []})
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     dispatch({type: 'FETCH_REQUEST'});
-  //     try{
-  //       const result = await axios.get("/api/product");
-  //       dispatch({type: 'FETCH_SUCCESS',payload : result.data});
-  //     }
-  //     catch(err) {
-  //       dispatch({type: 'FETCH_FAIL',payload : err.message});
-  //     }
-  //   };
-  //   fetchData();
-  // }, []);
+  const [{loading, error, products},dispatch] = useReducer(logger(reducer), {loading : true, error : '', products: []})
+  useEffect(() => {
+    const fetchData = async () => {
+      dispatch({type: 'FETCH_REQUEST'});
+      try{
+        const result = await axios.get("/api/products");
+        dispatch({type: 'FETCH_SUCCESS',payload : result.data});
+      }
+      catch(err) {
+        dispatch({type: 'FETCH_FAIL',payload : err.message});
+      }
+    };
+    fetchData();
+  }, []);
 
   return (
     <div>
@@ -39,7 +38,7 @@ function HomeScreen() {
         Featured Products
       </div>
       <div className="grid grid-cols-4 justify-items-center">
-        {data.products.map((product, index) => {
+        {products.map((product, index) => {
           return (
             <div
               className=" items-center w-80 border-2 border-gray-600 justify-between ml-5 mt-3"
