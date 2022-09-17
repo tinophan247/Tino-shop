@@ -17,7 +17,7 @@ const reducer = (state, action) => {
 };
 
 function HomeScreen() {
-  const [{loading, error, products},dispatch] = useReducer(logger(reducer), {loading : true, error : '', products: []})
+  const [{ products},dispatch] = useReducer(logger(reducer), {loading : true, error : '', products: []})
   useEffect(() => {
     const fetchData = async () => {
       dispatch({type: 'FETCH_REQUEST'});
@@ -34,7 +34,7 @@ function HomeScreen() {
 
   return (
     <div>
-      <div className="container-fluid font-bold text-3xl mt-3">
+      <div className="container-fluid font-bold text-3xl mt-3 ml-10">
         Featured Products
       </div>
       <div>
