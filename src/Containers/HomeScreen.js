@@ -2,6 +2,7 @@ import React, { useEffect, useReducer } from "react";
 import axios from "axios";
 import logger from "use-reducer-logger";
 import Product from "./Product";
+import { Helmet } from 'react-helmet-async';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -34,8 +35,11 @@ function HomeScreen() {
 
   return (
     <div>
+      <Helmet>
+        <title>Tino Shop</title>
+      </Helmet>
       <div className="container-fluid font-bold text-3xl mt-3 ml-10">
-        Featured Products
+        Best Seller
       </div>
       <div>
         <Product products={products}/>

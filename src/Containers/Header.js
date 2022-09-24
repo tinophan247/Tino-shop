@@ -13,7 +13,6 @@ export default class Header extends Component {
               <img alt="logo" src="/logo.png" style={{ width: 80 }} />
             </div>
           </div>
-          {/* search form */}
           <form className=" mt-8 mr-10">
             <div className="flex">
               <button

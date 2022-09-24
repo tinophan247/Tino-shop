@@ -9,6 +9,9 @@ module.exports = {
       colors: {
         'header-color' : '#f6f6e9'
       },
+      width: {
+        400 : '400px'
+      }
     },
   },
   plugins: [],
