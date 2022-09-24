@@ -1,17 +1,17 @@
 import React from 'react'
+import AddToCart from '../Components/cart/AddToCart';
 import Rating from '../Icons/Rating';
-import AddToCart from './cart/AddToCart';
 
 const Product = (props) => {
     const { products } = props;
 
     return (
         <div className=" grid grid-cols-4 justify-items-center">
-            {products.map((product, index) => {
+            {products.map((product) => {
                 return (
                     <div
                         className="cursor-pointer rounded-xl relative items-center w-80 border-2 border-gray-600 hover:bg-gray-200 group justify-between ml-5 mt-3"
-                        key={index}
+                        key={product.slug}
                     >
                         <article>
                             <img className="w-80 rounded-xl group-hover:saturate-200" src={product.img} alt={product.name} />
