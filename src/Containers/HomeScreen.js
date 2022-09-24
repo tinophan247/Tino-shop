@@ -39,7 +39,7 @@ function HomeScreen() {
         <title>Tino Shop</title>
       </Helmet>
       <div className="container-fluid font-bold text-3xl mt-3 ml-10">
-        Best Seller
+        Product Best Seller
       </div>
       <div>
         <Product products={products}/>
